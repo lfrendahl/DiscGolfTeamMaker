@@ -1,0 +1,83 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  .clear {
+  clear: both;
+  }
+  
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1.6rem;
+    line-height: 1em;
+    text-align: center;
+    background-image: url("../discgolfbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+ 
+.top {
+    height: 100px;
+}
+  
+  
+  h1 {
+    width: 100%;
+    font-size: 5rem;
+  }
+
+  h4 {
+    margin-top: 25%;
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+    color: #f71c1c;
+  }
+  img {
+    border-radius: 50%;
+    border: 5px solid #555;
+    width: 200px;
+    height: 200px;
+    justify-content: right;
+    margin-right: 100px;
+    margin-bottom: 15px;
+  }
+
+ 
+ .header {
+    display: flex;
+    border-top: 6px solid #ffd311;
+    background-color: white;
+    
+ }
+
+ .parent {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color:white;
+    border-bottom: 6px solid #ffd311;
+ }
+
