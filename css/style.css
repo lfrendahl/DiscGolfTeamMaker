@@ -44,40 +44,75 @@
   h1 {
     width: 100%;
     font-size: 5rem;
+    margin-top: 6rem;
+    font-family: 'Acme', sans-serif;
   }
 
   h4 {
-    margin-top: 25%;
     font-size: 3rem;
+    margin-bottom: 5vh;
+    font-family: 'Acme', sans-serif;
   }
 
   h3 {
-    font-size: 4rem;
+    font-size: 8rem;
     color: #f71c1c;
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 1px 1px black;
+    margin-top: 6rem;
+    margin-bottom: 7rem;
   }
+
   img {
     border-radius: 50%;
-    border: 5px solid #555;
+    border: 8px solid #555;
+    box-shadow: 10px 5px 20px red;
     width: 200px;
     height: 200px;
-    justify-content: right;
-    margin-right: 100px;
-    margin-bottom: 15px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 
  
  .header {
     display: flex;
-    border-top: 6px solid #ffd311;
+    border-top: 2rem solid #ffd311;
     background-color: white;
     
  }
 
  .parent {
-    display: flex;
+    display: inline-block;
+    width: 100%;
     justify-content: center;
     align-content: center;
     background-color:white;
-    border-bottom: 6px solid #ffd311;
+    border-bottom: 2rem solid #ffd311;
  }
 
+ .div {
+    width: 100%;
+ }
+
+ @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 5rem;
+        margin-top: 4rem;
+      }
+    
+      h4 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 6rem;
+        line-height: 5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 4rem;
+
+      }
+    
+
+
+  }
