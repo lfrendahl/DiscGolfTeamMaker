@@ -4,35 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TQM Virtual Bag Randomizer</title>
+    <title>Disc Golf Team Randomizer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="top"></div>
-    <section class="header">
-        <h1>Randomize a Disc:</h1>
+    <header>
+        <img src="logo.jpg">
+        <h1>Doubles Team Randomizer</h1>
+        <p>Directions: Add each player that will be competing today and then hit CREATE TEAMS for today's official match up. </p> 
+    </header>
+    <section class="hero">
+        <div class="actionbox"> 
+            <input id="name" type="text" name="name">
+            <button class="button" id="addplayer" type="button">ADD PLAYER</button>
+            <section class="playerlist">
+               <h3>Current Player List:</h3>
+                <ul>
+                    <li>Empty</li>
+               </ul>
+            </section>
+            <button class = "button" id="createteams" type="button">CREATE TEAMS</button>
+        </div>
     </section>
-    <section class="parent">
-
-        <div>
-            <img src="questionmark.jpg" alt="question mark" id="mysterybutton">
-        </div>
-        <div>
-            <h4>The disc is:</h4>
-            <h3></h3>
-        </div>
-      </section>
-
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
