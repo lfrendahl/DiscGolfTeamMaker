@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disc Golf Team Randomizer</title>
+    <title>Your Randomized Teams</title>
 
     <script src="https://kit.fontawesome.com/7fe634c4f7.js" crossorigin="anonymous"></script>
 
@@ -17,30 +17,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-results.css">
 </head>
 <body>
     <header>
         <img src="logo.jpg">
-        <h1>Doubles Team Randomizer</h1>
-        <p>Directions: Add each player that will be competing today and then hit CREATE TEAMS for today's official match up. </p> 
     </header>
     <section class="hero">
         <div class="actionbox"> 
-            <input id="name" type="text" placeholder="Enter Name...">
-            <button class="button" id="addplayer" type="button">ADD PLAYER</button>
-            <section class="playerlist">
-               <h3>Current Player List:</h3>
-                <ul>
-                    <li id="dropspot"></li>
-               </ul>
+            <div id="postresults">
+            </div>
+    </section>
+    <section class="hero">
+        <div class="actionbox"> 
+            <button class = "button" id="returntohome" type="button" onclick="location.href='index.html'">RETURN TO HOME</button>
+        </div>
             </section>
-            <button class = "button" id="clearallplayers" type="button">CLEAR ALL PLAYERS</button>
-            <button class = "button" id="createteams" type="button" onclick="location.href='results.html'">CREATE TEAMS</button>
+            
         </div>
     </section>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main-results.js"></script>
 </body>
-</html> 
-
-
+</html>
