@@ -26,14 +26,11 @@ function postList () {
         return
     } else {
             for (let i=0; i < playerListLength; i++) {
-                document.querySelector('#dropspot').innerHTML += `<li>${localStorage.getItem('playerList').split(' ')[i]}</i></li>`
+                document.querySelector('#dropspot').innerHTML += `<li>${localStorage.getItem('playerList').split(' ')[i]}</li>`
     }
    }
 };
 postList();
-
-//Option fa icon
-//<i class="fa-solid fa-xmark fa-xs"></i>
 
 
 //Created the add name function. Will fire on button click or on enter key down in the top text input
@@ -62,7 +59,7 @@ function clearAllPlayers() {
 
 
 
-
+//Randomize the results and sore them in local storage
 let randomizedOutput = []
 function randomize() {
     let listChoices = currentList.split(' ')
@@ -74,5 +71,36 @@ function randomize() {
     console.log(randomizedOutput)
     localStorage.setItem('result', randomizedOutput.join(' '))
 }
-
 randomize();
+
+
+//Deleting individual LI capabilities 
+
+
+//Grab all the list items we will be considering
+let items = document.querySelectorAll("#dropspot li"),
+      tab = [], liIndex;
+      console.log(items)
+
+// populate tab with li data
+for(let i = 0; i < items.length; i++){
+tab.push(items[i].innerHTML);
+}
+
+// get li index using tab array on li click event
+for(let i = 0; i < items.length; i++){
+
+// function that will actually take the current list, and remove the element that was clicked by it's index. The it will update locale storage and reload the page
+items[i].onclick = function(){
+
+let currentListArray = currentList.split(' ')
+liIndex = tab.indexOf(this.innerHTML);
+console.log(this.innerHTML + ' ' + liIndex);
+currentListArray.splice(liIndex, 1)
+currentList = currentListArray.join(' ')
+localStorage.setItem('playerList', currentList);
+location.reload();
+};
+
+}
+
