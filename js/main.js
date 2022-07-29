@@ -18,7 +18,7 @@ document.querySelector('#clearallplayers').addEventListener('click', clearAllPla
 //Check to see if there is a current list in Local Storage
 let currentList = localStorage.getItem('playerList') || '';
 //Find the length to use for future calculations
-let playerListLength = currentList.split(' ').length;
+let playerListLength = currentList.split('*').length;
 
 //Put the current list on the page
 function postList () {
@@ -26,7 +26,7 @@ function postList () {
         return
     } else {
             for (let i=0; i < playerListLength; i++) {
-                document.querySelector('#dropspot').innerHTML += `<li>${localStorage.getItem('playerList').split(' ')[i]}</li>`
+                document.querySelector('#dropspot').innerHTML += `<li>${localStorage.getItem('playerList').split('*')[i]}</li>`
     }
    }
 };
@@ -43,7 +43,7 @@ function addName() {
         localStorage.setItem('playerList', currentList);
         location.reload();
          } else {
-        currentList += ` ${newPlayer}`
+        currentList += `\*${newPlayer}`
         localStorage.setItem('playerList', currentList);
         location.reload();
          }
@@ -62,14 +62,14 @@ function clearAllPlayers() {
 //Randomize the results and sore them in local storage
 let randomizedOutput = []
 function randomize() {
-    let listChoices = currentList.split(' ')
+    let listChoices = currentList.split('*')
     for (let i=0; i<playerListLength; i++) {
         let randomNumber = Math.floor(Math.random() * (playerListLength - i))
         randomizedOutput.push(listChoices[randomNumber])
         listChoices.splice(randomNumber,1)
     }
     console.log(randomizedOutput)
-    localStorage.setItem('result', randomizedOutput.join(' '))
+    localStorage.setItem('result', randomizedOutput.join('*'))
 }
 randomize();
 
@@ -93,11 +93,10 @@ for(let i = 0; i < items.length; i++){
 // function that will actually take the current list, and remove the element that was clicked by it's index. The it will update locale storage and reload the page
 items[i].onclick = function(){
 
-let currentListArray = currentList.split(' ')
+let currentListArray = currentList.split('*')
 liIndex = tab.indexOf(this.innerHTML);
-console.log(this.innerHTML + ' ' + liIndex);
 currentListArray.splice(liIndex, 1)
-currentList = currentListArray.join(' ')
+currentList = currentListArray.join('*')
 localStorage.setItem('playerList', currentList);
 location.reload();
 };

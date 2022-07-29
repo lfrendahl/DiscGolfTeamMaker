@@ -53,6 +53,7 @@
   flex-direction: column;
   justify-content: center;
   border: 1.5px solid #FFEDCD;
+  box-shadow: 1px 1px 10px black;
   border-radius: .8rem;
   margin-bottom: 1rem;
   margin-top: 2rem;
@@ -60,6 +61,7 @@
  
  .button {
   background-color: #E96A35;
+  box-shadow: .5px .5px 4px black;
   font-weight: 700;
   height: 3rem;
   color: #FFEDCD;
