@@ -10,7 +10,7 @@ function postResults () {
     let currentTeam = 1
      for (let i=0; i < resultLength; i+=2) {
         document.querySelector('#postresults').innerHTML += `<ul>
-                   <li class='teamname'>Team${currentTeam}</li>
+                   <li class='teamname'>Team ${currentTeam}</li>
                    <li>${result[i]}</li>
                    <li>${result[i+1]}</li> 
              </ul>`
