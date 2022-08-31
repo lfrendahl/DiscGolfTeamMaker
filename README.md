@@ -4,7 +4,7 @@
 
 **Link to project:** https://floeverbui.netlify.app/
 
-![randomizer button and name of returned disc](https://github.com/lfrendahl/DiscGolfTeamMaker/blob/main/teammakerCover.jpg)
+![list of inputed names next to names sorted by 2's into teams](https://github.com/lfrendahl/DiscGolfTeamMaker/blob/main/teammakerCover.jpg)
 
 ## How It's Made:
 
