@@ -16,7 +16,7 @@ On load the input box is already selected. This is planned so that as that list 
 The actual team creation starts with an array of names and then uses the math random functionality to select an index from the list and remove it before randomizing again for the next pick from a smaller list. 
 
 ## Optimization Plan
-One of the errors that I had to work through was if users wanted to enter a name with a space in it. At the time I was storing data in local storage as a string with spaces. I adjusted the storage plan by separating name with the '*' character, but best practices would be collecting the data in a JSON format and then storing and accessing it using the JSON.stringify and JSON.parse methods. The current data storage method has vulnerability if users are tryign to input a name that is * ~ fancy ~ *
+One of the errors that I had to work through was if users wanted to enter a name with a space in it. At the time I was storing data in local storage as a string with spaces. I adjusted the storage plan by separating name with the '*' character, but best practices would be collecting the data in a JSON format and then storing and accessing it using the JSON.stringify and JSON.parse methods. The current data storage method has vulnerability if users are tryign to input a name that is  * ~ fancy ~ *.
 
 Another future plan to exapand this would be to allow users to select the size of team they want created.
 
