@@ -74,7 +74,7 @@ randomize();
 //Deleting individual LI capabilities 
 
 
-//Grab all the list items we will be considering
+//Declare variable and grab all the list items we will be considering
 let items = document.querySelectorAll("#dropspot li"),
       tab = [],
       liIndex;
